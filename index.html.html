@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宇柏瑾 - 前端工程師履歷</title>
+    <!-- 引入 Tailwind CSS 以快速實現響應式設計 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Font Awesome 提供圖示 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 引入 Google Fonts 的 Noto Sans TC 字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 自定義樣式 */
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f0f2f5; /* 頁面背景色，突顯履歷主體 */
+        }
+        /* 定義品牌顏色 */
+        .brand-red {
+            background-color: #c4252b;
+        }
+        .brand-text {
+            color: #454545;
+        }
+        /* 讓A4大小的履歷在頁面中置中 */
+        .resume-container {
+            max-width: 21cm; /* A4 寬度 */
+            min-height: 29.7cm; /* A4 高度 */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin: 2rem auto;
+        }
+        /* 技能標籤樣式 */
+        .skill-tag {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.875rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+        /* 專案技術標籤樣式 */
+        .project-tech-tag {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            display: inline-block;
+        }
+        /* 連結樣式 */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .left-column a {
+            color: #ffffff;
+            font-weight: 500;
+        }
+        .left-column a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 履歷主體容器 -->
+    <div class="resume-container bg-white flex flex-col md:flex-row">
+        
+        <!-- 左側欄位 (個人資訊) -->
+        <aside class="w-full md:w-1/3 brand-red text-white p-6 md:p-8">
+            <div class="flex flex-col items-center">
+                <!-- 大頭照 (使用 placeholder) -->
+                <div class="w-40 h-40 rounded-full bg-white mb-4 border-4 border-white shadow-lg overflow-hidden">
+                    <img src="/大頭照.png" alt="宇柏瑾的大頭照" class="object-cover w-full h-full">
+                </div>
+                
+                <!-- 姓名與求職目標 -->
+                <h1 class="text-3xl font-bold text-center">宇柏瑾</h1>
+                <p class="text-lg mt-1 text-center">求職目標：前端工程師</p>
+            </div>
+
+            <hr class="my-6 border-t border-white/30">
+
+            <!-- 關於我 -->
+            <section>
+                <h2 class="text-xl font-bold mb-2 flex items-center"><i class="fas fa-user-circle w-6 mr-2"></i>關於我</h2>
+                <!-- **優化**：文字微調，更強調積極性與連結性 -->
+                <p class="text-sm leading-relaxed">
+                    你好，我是一位對前端開發充滿熱情的轉職者。過往環境工程的背景培養了我嚴謹的分析能力，金融業的歷練則讓我具備細心與使用者導向的特質。目前正於逢甲大學前端課程精進技術，渴望能為貴公司貢獻所學，打造卓越的網站產品。
+                </p>
+            </section>
+
+            <hr class="my-6 border-t border-white/30">
+
+            <!-- 聯絡資訊 -->
+            <section>
+                <h2 class="text-xl font-bold mb-3 flex items-center"><i class="fas fa-address-book w-6 mr-2"></i>聯絡資訊</h2>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex items-center"><i class="fas fa-phone-alt w-5 mr-3"></i><a href="tel:0966507637">0966-507-637</a></li>
+                    <li class="flex items-center"><i class="fas fa-envelope w-5 mr-3"></i><a href="mailto:z2915891@gmail.com">z2915891@gmail.com</a></li>
+                    <!-- **新增**：填入您的 GitHub 連結 -->
+                    <li class="flex items-center"><i class="fab fa-github w-5 mr-3"></i><a href="https://github.com/Paimiya" target="_blank" rel="noopener noreferrer">github.com/Paimiya</a></li>
+                </ul>
+            </section>
+
+            <hr class="my-6 border-t border-white/30">
+
+            <!-- 技術技能 -->
+            <section>
+                <h2 class="text-xl font-bold mb-3 flex items-center"><i class="fas fa-cogs w-6 mr-2"></i>技術技能</h2>
+                <div class="flex flex-wrap">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Vue.js</span>
+                    <span class="skill-tag">RWD</span>
+                    <span class="skill-tag">Sass/SCSS</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </section>
+            
+            <hr class="my-6 border-t border-white/30">
+
+            <!-- 學歷 -->
+            <section>
+                <h2 class="text-xl font-bold mb-3 flex items-center"><i class="fas fa-graduation-cap w-6 mr-2"></i>學歷</h2>
+                <div class="text-sm">
+                    <p class="font-semibold">逢甲大學</p>
+                    <p class="text-xs mb-2">網頁前端技術課程 (2025/08 結訓)</p>
+                    <p class="font-semibold">國立高雄第一科技大學</p>
+                    <p class="text-xs">環境與安全衛生工程學系 (2021/06 畢業)</p>
+                </div>
+            </section>
+            
+            <hr class="my-6 border-t border-white/30">
+
+            <!-- 其他證照 -->
+            <section>
+                 <h2 class="text-xl font-bold mb-2 flex items-center"><i class="fas fa-certificate w-6 mr-2"></i>其他證照</h2>
+                 <p class="text-sm">擁有多張證券、期貨、投信投顧等金融相關專業證照。</p>
+            </section>
+
+        </aside>
+
+        <!-- 右側欄位 (經驗與作品) -->
+        <main class="w-full md:w-2/3 p-6 md:p-10 brand-text">
+            
+            <!-- 專案作品 -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold text-red-700 border-b-4 border-red-700 pb-2 mb-4">專案作品</h2>
+                
+                <!-- **修改**：專案一，根據您提供的資訊進行修改與潤飾 -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold">少年英雄聯盟 官方網站改版</h3>
+                    <p class="text-sm text-gray-600 mb-2">團隊專案 (4人小組) / 擔任 前端開發</p>
+                    <div class="mb-2">
+                        <span class="project-tech-tag">Vue.js</span>
+                        <span class="project-tech-tag">Bootstrap</span>
+                        <span class="project-tech-tag">Swiper.js</span>
+                        <span class="project-tech-tag">RWD</span>
+                    </div>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>主要負責前端程式開發，使用 Vue.js 建構響應式介面與互動功能。</li>
+                        <li>運用 AI 使用自然語言，製作元件向上組合成完整的頁面</li>
+                        <li>與組員協作，將設計稿轉化為實際網頁，並確保程式碼的可維護性。</li>
+                        <li><span class="font-semibold">專案連結：</span><a href="https://fcu-11404-ljh.dev-hub.io/" target="_blank" rel="noopener noreferrer">點此預覽</a></li>
+                    </ul>
+                </div>
+
+                <!-- **修改**：專案二，根據您提供的資訊進行修改與潤飾 -->
+                <div>
+                    <h3 class="text-xl font-bold">春天出版社 形象網站規劃</h3>
+                    <p class="text-sm text-gray-600 mb-2">團隊專案 (4人小組) / 擔任 架構規劃</p>
+                     <div class="mb-2">
+                        <span class="project-tech-tag">Figma</span>
+                        <span class="project-tech-tag">UI/UX Design</span>
+                        <span class="project-tech-tag">Wireframing</span>
+                    </div>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>負責網站整體架構規劃，參與使用 Figma 繪製 Wireframe 與可互動的 Prototype。</li>
+                        <li>從使用者體驗出發，重新定義網站資訊架構，並設計可複用的裝飾性元件。</li>
+                        <li>這個專案讓我深入理解從設計到開發的流程，有助於未來與設計師更高效的協作。</li>
+                        <li><span class="font-semibold">設計稿：</span><a href="https://fcu-11404-ljh.dev-hub.io/" target="_blank" rel="noopener noreferrer">Figma 連結</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 工作經歷 -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold text-red-700 border-b-4 border-red-700 pb-2 mb-4">工作經歷</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-lg font-bold">玉山證券 / 後台專員</h3>
+                        <!-- **優化**：將經歷與前端職位所需特質做更強的連結 -->
+                        <ul class="list-disc list-inside text-sm space-y-1">
+                            <li>負責每日交易結算與帳務處理，培養出對細節的專注與嚴謹邏輯，有助於編寫精確、低錯誤率的程式碼。</li>
+                            <li>處理客戶交易異常與系統問題回報，訓練出快速分析問題、找出解決方案的能力。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold">元富證券 / 營業員</h3>
+                         <ul class="list-disc list-inside text-sm space-y-1">
+                            <li>透過有效溝通，深入理解客戶需求並提供客製化金融服務，這份經驗讓我建立起以使用者為中心的思維模式。</li>
+                            <li>需分析市場動態，整合複雜資訊後向客戶提出專業建議，此能力有助於前端開發中的數據呈現與視覺化。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold">飯店 / 餐飲服務員</h3>
+                         <ul class="list-disc list-inside text-sm space-y-1">
+                            <li>在快節奏的環境中與團隊緊密協作，並能從容應對突發狀況，展現高抗壓性與團隊合作精神。</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 課外經歷 -->
+            <section>
+                <h2 class="text-3xl font-bold text-red-700 border-b-4 border-red-700 pb-2 mb-4">課外經歷</h2>
+                 <div>
+                    <h3 class="text-lg font-bold">動物保護社 / 器材幹部</h3>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>主動規劃並執行社團招募活動，面對挑戰能迅速調整策略，並在過程中展現團隊協作與溝通能力。</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
